@@ -20,9 +20,12 @@ Key points
 Create a group database groupXDatabase. You can clean the db you previously used and reuse that.
 This time each group should have a single git branch. Coordinate amongst yourselves by ensuring every next person pulls the code last pushed by a team mate. You branch will be checked as part of the demo. Branch name should follow the naming convention project/urlShortnerGroupX
 Follow the naming conventions exactly as instructed. The backend code will be integrated with the front-end application which means any mismatch in the expected request body will lead to failure in successful integration.
+
+
 Models
 Url Model
 { urlCode: { mandatory, unique, lowercase, trim }, longUrl: {mandatory, valid url}, shortUrl: {mandatory, unique} }
+
 POST /url/shorten
 Create a short URL for an original url recieved in the request body.
 The baseUrl must be the application's baseUrl. Example if the originalUrl is http://abc.com/user/images/name/2 then the shortened url should be http://localhost:3000/xyz
@@ -34,6 +37,7 @@ Redirect to the original URL corresponding
 Use a valid HTTP status code meant for a redirection scenario.
 Return a suitable error for a url not found
 Return HTTP status 400 for an invalid request
+
 Testing
 To test these apis create a new collection in Postman named Project 4 Url Shortner
 Each api should have a new request in this collection
